@@ -27,4 +27,22 @@ Laboratory no. 3
 ![lab3_3](https://github.com/user-attachments/assets/0134f547-c6c8-4bbf-8040-5738c45eaba4)
 
 Laboratory no. 4
+1. Using glDrawElements() with indexed vertices draw the figure below.
+   ![lab4_1](https://github.com/user-attachments/assets/f3479dae-9820-465b-8fcb-f9259b1fcdbd)
 
+1.1. Generate 𝑛 points (where 𝑛=8,10,12—choose a value) on two concentric circles centered at the origin, and then draw an outline similar to the one below (in this example 𝑛=8; adapt the outline based on your chosen value). Hint: Points on a circle with center 𝑂 and radius 𝑟 can be represented as 𝑥=𝑟cos(𝜃), 𝑦=𝑟sin(𝜃), where 𝜃 is in [0,2𝜋). Select 𝜃 values in the form 2𝑘𝜋/𝑛, with 𝑘=0,1,2,…,𝑛−1 to obtain 𝑛 points on the circle (forming a regular 𝑛-sided polygon).
+
+   ![lab4_1_1](https://github.com/user-attachments/assets/a4b3f63d-269f-44c0-bbed-5c3350983927)
+
+2. Create a simple drawing (e.g., a house and tree) using two VAOs or two VBOs.
+
+![lab4_2](https://github.com/user-attachments/assets/acf3e88f-44bc-41ef-b04a-a66e03f08125)
+
+3. In the initial source code 04_02_indexing.cpp (which currently only draws a square), add matrices for a scaling transformation with factors (2.0,0.5) and a translation vector (100,100). Be sure to update the shader as needed. Then, draw both of the following in the same scene:
+-An object with a color blend, created by applying the scaling first and then the translation
+-A textured object, created by applying the translation first and then the scaling
+
+![image](https://github.com/user-attachments/assets/38845da6-60db-42c4-b896-cab9dd69a53b)
+
+
+   
