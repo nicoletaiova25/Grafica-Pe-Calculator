@@ -1,4 +1,4 @@
-# Grafica-Pe-Calculator 💻
+# Grafica-Pe-Calculator 💻🖋️
 
 University optional course for Computer Graphics in OpenGL, using mainly C++ and GLSL as well as standard libraries for the latest version of OpenGL. As a student using OpenGL at university, I work on simple 2D and 3D projects to learn the fundamentals of graphics programming. This hands-on experience is invaluable for helping me understand essential concepts like the rendering pipeline, transformations, and shaders, which form the backbone of modern computer graphics.
 
@@ -123,4 +123,30 @@ As for the Environment I'm using Microsoft Studio 2022, branding an OpenGL Templ
           To add complexity to the project, the overtaking maneuver is triggered by the user, via a mouse 🖱️ or touchpad click 🌠. As an additional element, the simulation includes an oncoming car driving in the opposite lane. <br>
           If the user’s action leads to a collision 💥 with the oncoming car during the overtaking attempt, an accident occurs, causing the oncoming car to be thrown off the road. Subsequently, a police car 🚓 appears and stops at the scene of the accident. Conversely, if the overtaking maneuver is completed successfully, all cars continue their respective trajectories. <br>
       </details>
+</details>
+
+<details>
+  <summary>
+    <h2>Laboratory no. 5 ☄️ </h2> 
+  </summary>
+
+  1. Use matrix stacks and a procedurally generated sphere to create a mini solar system. ☀️ 🌍 🌕 Elements to consider:
+(i) Add a satellite to the planet.
+(ii) Each celestial body should have its own unique color, which varies from vertex to vertex (you may use a single VAO/VBO and handle the colors in the vertex shader).
+(iii) Do not represent curves such as meridians or parallels on the spheres.
+     
+  ### 🎞️ A video showcasting functionality of assignment: 🌠 [The video](https://youtu.be/gbBuw-1xqWE) 🌠
+     
+       
+  2. Represent a surface (cylinder or cone, as specified in the provided file). 
+  ### 🎞️ A video showcasting functionality of assignment: 🌠 [The video](https://youtu.be/NWqqOepkMds) 🌠
+
+  3. Use at least two 3D objects (sphere, cylinder, cone, etc.) to sketch a real 3D object (tree, snowman, etc.). ⛄
+     <details>
+       <summary>Click to see the results 🌟</summary>
+       <div align="center">  
+         <img width="100%" alt="image" src="https://github.com/user-attachments/assets/dd2263cd-1a4c-4846-bc4b-53f09dc594e1">
+       </div>
+     </details>
+
 </details>
