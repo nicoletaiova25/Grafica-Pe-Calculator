@@ -10,32 +10,28 @@
 
 #version 330
 
-float winWidth = 1400; // Latimea ferestrei
-
-//	Variabile de intrare (dinspre Shader.vert);
-in vec4 gl_FragCoord; // Variabila care indica pozitia fragmentului (prin raportare la fereastra de vizualizare)
 in vec3 ex_Color; 
+in float yCoord; // Coordonata verticala primita de la vertex shader
 
-//	Variabile de iesire	(spre programul principal);
 out vec3 out_Color;
 
-//  Variabile uniforme;
 uniform int codCol;
 
 void main(void)
 {
-    switch (codCol)
-    {
-        case 1: 
-            out_Color=vec3(1.0, 0.984, 0.0); 
-            break;
-        case 2:
-            out_Color=vec3(0.0, 0.0, 1.0); // Culoarea este stabilita in functie de pozitia fragmentului in fereastra 
-            break;
-        case 3:
-            out_Color=vec3(1.0, 0.0, 0.0);
-            break;
-        default: 
-            out_Color=ex_Color;
+    if (codCol == 1 || codCol == 2 || codCol == 3) { 
+        // Normalizare yCoord intr-un interval [0, 1]
+        float normalizedY = (yCoord + 50.0) / 100.0; // Presupunem ca sfera are raza 50
+        normalizedY = clamp(normalizedY, 0.0, 1.0); // Asiguram că valorile sunt intre 0 si 1
+
+        if (codCol == 1)
+            out_Color = mix(vec3(1.0, 0.5, 0.0), vec3(1.0, 1.0, 0.0), normalizedY); // Gradient portocaliu-galben
+        else if (codCol == 2)
+            out_Color = mix(vec3(0.0, 0.0, 0.5), vec3(0.0, 0.0, 1.0), normalizedY); // Gradient albastru
+        else
+            out_Color = mix(vec3(0.5, 0.0, 0.0), vec3(1.0, 0.0, 0.0), normalizedY); // Gradient rosu
+    } else {
+        out_Color = ex_Color; // Culoare implicita
     }
 }
+
